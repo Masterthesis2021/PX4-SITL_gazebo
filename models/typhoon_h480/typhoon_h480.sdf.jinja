@@ -401,6 +401,15 @@
         <always_on>1</always_on>
         <update_rate>10</update_rate>
         <visualize>true</visualize>
+        <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+          <cameraName>gimbal</cameraName>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>10</updateRate>
+          <imageTopicName>/gimbal/image_raw</imageTopicName>
+          <cameraInfoTopicName>/gimbal/camera_info</cameraInfoTopicName>
+          <frameName>gimbal_optical_frame</frameName>
+          <robotNamespace>/</robotNamespace>
+        </plugin>
         <plugin name="GstCameraPlugin" filename="libgazebo_gst_camera_plugin.so">
             <robotNamespace></robotNamespace>
             <udpHost>127.0.0.1</udpHost>
